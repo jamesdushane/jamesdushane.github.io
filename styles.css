@@ -317,3 +317,35 @@ main {
 .project:nth-child(3) {
   animation-delay: 0.2s;
 }
+
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: var(--black);
+  }
+
+  header {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  nav a {
+    color: var(--black);
+  }
+
+  .linkedin-icon {
+    filter: invert(1);
+  }
+
+  .hero {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .project {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .project p {
+    color: var(--gray-dark);
+  }
+}
