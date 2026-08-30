@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — James Dushane</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+<script>
+  (function () {
+    try {
+      var m = localStorage.getItem('jd-theme');
+      if (m === 'light' || m === 'dark') document.documentElement.setAttribute('data-theme', m);
+    } catch (e) {}
+  })();
+</script>
+<style>
+:root {
+  --bg: #F3F5F7;
+  --ink: #14191C;
+  --muted: #5D686E;
+  --faint: #8C979D;
+  --rule: #D5DCE1;
+  --accent-base: #2E93BC;
+  --accent: var(--accent-base);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15191B; --ink: #E9EDEF; --muted: #99A4AA; --faint: #6F7A80; --rule: #2C3336;
+    --accent: color-mix(in oklab, var(--accent-base) 74%, #FFFFFF);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15191B; --ink: #E9EDEF; --muted: #99A4AA; --faint: #6F7A80; --rule: #2C3336;
+  --accent: color-mix(in oklab, var(--accent-base) 74%, #FFFFFF);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.wrap { max-width: 520px; }
+.code {
+  font-family: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-stretch: 78%;
+  font-size: clamp(64px, 16vw, 132px);
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 0;
+}
+.lead {
+  margin: 22px 0 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+.home {
+  display: inline-block;
+  margin-top: 34px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 3px;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+.home:hover { color: var(--muted); border-color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="code">404</p>
+    <p class="lead">That page doesn't exist. Everything now lives on a single page.</p>
+    <a class="home" href="/">← Back to james.dushane.com</a>
+  </div>
+</body>
+</html>
